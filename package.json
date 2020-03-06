@@ -1,0 +1,35 @@
+{
+  "name": "guara-client",
+  "version": "1.0.0",
+  "description": "Landing page guara",
+  "main": "index.js",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "animate.css": "^3.7.0",
+    "bootstrap-select": "^1.13.10",
+    "browser-sync": "^2.26.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leosaraujos/guara.git"
+  },
+  "author": "Leo Araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leosaraujos/guara/issues"
+  },
+  "homepage": "https://github.com/leosaraujos/guara#readme"
+}
