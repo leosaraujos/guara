@@ -4,7 +4,7 @@ $('.navbar-nav>li>a').on('click', function(){
 });
 
 //Scroll Page
-$('a.scroll_section').on('click',function (e) {
+$('a.scroll_nav').on('click',function (e) {
     // e.preventDefault();
     var target = this.hash,
     $target = $(target);
@@ -34,7 +34,10 @@ $(window).on('scroll',function() {
 
 });
 
-//Modal
-$('#modalVideo').on('hidden.bs.modal', function (e) {
-  $('#modalVideo iframe').attr("src", $("#modalVideo iframe").attr("src"));
+//Galeria Tsunami
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({
+        alwaysShowClose: true
+    });
 });

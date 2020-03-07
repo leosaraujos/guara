@@ -1,11 +1,8 @@
+//Fonts
+@import url(https://use.typekit.net/utt4nlh.css);
+
 //Colors
 @import 'client_colors.scss';
-//Fonts
-//@import 'client_fontface.scss';
-$font_padrao: 'galano-medium';
-$font_bold:   'galano-heavy';
-$font_black:  'galano-black';
-$font_extra:  'galano-extra';
 
 //Mixins Border-radius
 @mixin border-radius($radius) {
@@ -51,66 +48,71 @@ $font_extra:  'galano-extra';
 }
 //Placeholder
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */  
-  font-size: 0.9rem;   
+  font-size: 0.9rem;
+  color: $purple !important;
+  font-weight: 700;	   
 }
 ::-moz-placeholder { /* Firefox 19+ */  
   font-size: 0.9rem;
+  color: $purple !important;
+  font-weight: 700;	
 }
 :-ms-input-placeholder { /* IE 10+ */  
   font-size: 0.9rem;
+  color: $purple !important;
+  font-weight: 700;	
 }
 :-moz-placeholder { /* Firefox 18- */  
   font-size: 0.9rem;
+  color: $purple !important;
+  font-weight: 700;	
 }
-*,
-html,
-body {
-	font-family: $font_padrao;
+
+*, html, body {
+	font-family: abadi, sans-serif !important;
 }
+
 // Nav
-.nav-tsunami {
-	background: #ffffff;
+.navClient {
 	padding: 0 1rem;
+	transition: 0.2s;
 	.navbar-brand {
-		padding-top: 0;
-		padding-bottom: 0;
+		margin-left: 26rem !important;
+		img {
+		    height: 160px;
+			padding-top: 1.0rem;
+		}
 	}
 	.navbar-nav {
 		li {
 			.nav-link {
+				color: $purple;
+				font-weight: 700;
 				&:hover {
-					color: $yellow;
+					color: $green;
 					transition: 0.3s;				
 				}
 			}
 		}
-	}
-	.social-header {
-		list-style: none;
-		padding: 0;
-		margin: 10px 0;
-		li {
-			display: inline-block;
-			margin: 0 10px;
-			a {
-				color: #000000;
-				font-size: 1.2rem;
-				&:hover {
-					color: $yellow;
-				}
-			}
-		}
-	}
+	}	
 }
-.fixed-tsunami {
+.fixClient {
 	position: fixed;
-	background: #ffffff;
+	background: $yellow !important;
 	width: 100%;
 	z-index: 9;
 	top: 0;
 	left: 0;
 	transition: 0.3s;
-	box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);        
+	box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);  
+
+	.navbar-brand {
+		margin-left: 0 !important;
+		img {
+			height: 50px;
+			padding-top: 0.2rem;
+		}
+	}      
 }
 // Carousel
 .carousel-indicators {
@@ -125,69 +127,146 @@ body {
 section {
 	margin: 100px 0;
 }
-// Mix de Produtos
+
+//mixin produtos
 #mixin-produtos {
-	h3 {
-		font-family: $font_bold;
+	margin-top: 0;
+	.bgMixin {
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		margin-top: -50px;
+		padding: 4.5rem 3.5rem 8.0rem 3.5rem;
+		background-image: -moz-radial-gradient( 22% 55%, circle closest-side, rgb(0,255,162) 0%, rgb(0,166,81) 100%);
+		background-image: -webkit-radial-gradient( 22% 55%, circle closest-side, rgb(0,255,162) 0%, rgb(0,166,81) 100%);
+		background-image: -ms-radial-gradient( 22% 55%, circle closest-side, rgb(0,255,162) 0%, rgb(0,166,81) 100%);
+
+		.imgProd {
+			width: 60%;
+			text-align: center;
+		}
+		.infoProd {
+			width: 40%;
+		}
+		h3 {
+			color: $purple;
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+		p {
+			color: $white;
+			font-weight: 700;
+		}
+		.bgFolhas {
+			position: absolute;
+			width: 100%;
+			height: 220px;
+			left: 0;
+			bottom: 0;
+
+			background: url('../images/folhas-ap-multiply.png') center -24px no-repeat;
+
+			mix-blend-mode: multiply;
+		}
 	}
-	h4 {
-		font-family: $font_padrao;
-		color: $yellow;
+	.produtos {
 		text-align: center;
-		font-size: 1.6rem;
-		strong {
-			display: block;
-			font-size: 4.2rem;
+		margin-top: 100px;
+		img {
+			height: 200px;
+		}
+		.nameProd {
+			color: $purple;
+			margin-bottom: 1.5rem;
+			font-weight: 800;
+			span {
+				display: block;
+			}
 		}
 	}
 }
-// Produtos 
-#produtos {
-	text-align: center;
-	figure {
-		vertical-align: bottom;
-    	display: table-cell;		
-		height: 240px;
-	}
-	.nome-produto {
-		color: $yellow;
-		font-family: $font_bold;
-		font-size: 1.4rem;
-		line-height: 1.4rem;
-		margin-bottom: 10px;
-	}
-	a {
-		@include btn-default-client();
+
+//Saores
+#sabores {
+	background: $yellow url('../images/bg-sabor.jpg') center center no-repeat;
+	background-size: cover;
+	padding: 4.0rem 0 0;
+	margin-bottom: 0;
+	.sabor {
+		display: flex;
+		margin-bottom: 5.0rem;
+		padding-bottom: 5.0rem;
+		.space {
+			width: 40%;
+		}
+		&.limao {
+			margin-top: 100px;
+			background: url('../images/limao-multiplay.png');
+			background-repeat: no-repeat;
+			background-size: 200px auto;
+			background-position: 60px 25px;
+
+			mix-blend-mode: multiply;
+		}
+		&.acai {
+			background: url('../images/acai-multiplay.png');
+			background-repeat: no-repeat;
+			background-size: 220px auto;
+			background-position: 20px 30px;
+
+			mix-blend-mode: multiply;
+		}
+		&.guarana {			
+			background: url('../images/guarana-multiplay.png');
+			background-repeat: no-repeat;
+			background-size: 200px auto;
+			background-position: 50px 55px;
+
+			mix-blend-mode: multiply;
+		}
+		&.gengibre {
+			margin-top: 100px;	
+			background: url('../images/gengibre-multiplay.png');
+			background-repeat: no-repeat;
+			background-size: 200px auto;
+			background-position: 20px 25px;
+
+			mix-blend-mode: multiply;
+		}
+		.info {
+			width: 60%;
+			.nameFruit {
+				color: $green2;
+				font-weight: 800;
+				mix-blend-mode: normal !important;
+			}
+			p {
+				color: $purple;
+				font-weight: 700;
+			}
+		}
 	}
 }
 
-// Sobre
-#sobre {
-	background-color: $yellow;
-	padding: 50px 0;
-	margin: 50px 0 0;
-	text-align: center;	
-	figure {		    	
-		height: 240px;		
-		img {
-			@include vertical-align ();	
-		}		
-	}
-	.nome-sub {
-		font-family: $font_bold;
-		font-size: 1.5rem;
-		text-transform: uppercase;
-	}
-	.infos-sub {
-		list-style: none;
-		margin: 0 0 50px;
-		padding: 0;
+.btClient,
+.bt-send {
+	background: $green;
+	color: $white !important;
+	transition: 0.3s;
+	font-weight: 200;
+	font-style: italic;
+	&:hover {
+		color: $white;
+		background: $purple !important;
+		transition: 0.3s;
 	}
 }
+
 //Pontos de Venda
 #map {
 	padding: 0 !important;
-	margin: 0  0 50px 0!important;
+	margin: 0  0 50px 0!important;	
 	iframe {
 		border: 0;
 		width: 100%;
@@ -196,26 +275,24 @@ section {
 // Fale Conosco
 #fale_conosco {
 	h2 {
-		font-family: $font_bold;
-	}
-	.form-control {
-		background-color: $yellow-2;
-  		border-color: $yellow;  		
+		color: $purple;
+		text-transform: uppercase;
+		font-weight: 800;
+	}	
+	input {
+	  background-color: $yellow;
+  	  color: $purple;	
 	}
 	textarea {
 		height: 145px !important;
+		background-color: $yellow;
+  		color: $purple;
 	}
 	.bt-send {
-		background-color: $yellow;
-		color: #000;
 		float: right;
 		padding: 6px 30px; 
-		margin-right: 15px;
-		&:hover {
-			transition: 0.3s;
-			background-color: #000;
-			color: $yellow;
-		}
+		margin-right: 15px;		
+		font-style: normal;
 	}
 	#retorno {
 		padding-left: 15px;
@@ -226,7 +303,6 @@ section {
 	#resposta {		
 		text-align: center;
 		.badge {
-			font-family: $font_padrao;
 			margin: 0 5px !important;
 		}
 	}
@@ -236,50 +312,52 @@ section {
 		padding: 30px 50px;
 	}
 }
-//Social plugin
-#social {
-	h2 {
-		font-family: $font_bold;
-	}
-	.btn-default-tst {
-		@include btn-default-client();
-		margin-bottom: 20px;
-	}
-	.social-footer {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			display: inline-block;
-			margin:  0 10px;
-			a {
-				color: #000;
-				font-size: 20px;
-				&:hover {
-					transition: 0.3s;					
-					color: $yellow;
-				}
-			}
-		}
-	}
-}
+
 // Footer
 footer {
+	color: $purple;	
 	a {
-		color: #000000;
+		color: $purple;
 		text-decoration: underline;
 		&:hover {
-			color: $yellow;			
 			text-decoration: none;
 		}
 	}
 }
+
 // Modal 
 .ekko-lightbox {
-	background-color: rgba(254,215,0,0.9);
+	background-color: rgba($yellow,0.8);
+	.modal-header {
+	    display: flex;
+	    justify-content: flex-end;
+	    width: 100%;
+	    border: 0;
+	    padding: 0 !important;
+	    margin: 0 !important;
+	    border-radius: 0;
+	    line-height: 0;
+	    .modal-title { display: none !important }
+	    .close {
+	    	background: $green;
+	    	opacity: 1;
+	    	width: 50px;
+	    	height: 50px;
+	    	padding: 0 !important;
+	    	margin:  0 !important;
+	    	font-size: 2.9rem;
+	    	color: $white;
+	    	span {
+	    		margin-top: -3px;
+	    	}
+	    }
+	}
+	.modal-body {}
 	.ekko-lightbox-nav-overlay {
+		top: 50px;
+		height: 85%;
 		a {
-			color: #000000;
+			color: $green;
 		}
 	}
 }

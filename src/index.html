@@ -8,34 +8,35 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">            
     <link rel="stylesheet" href="css/animate.min.css">        
     <link rel="stylesheet" href="css/ekko-lightbox.min.css">
-    <link rel="stylesheet" href="css/client_style.min.css">    
+    <link rel="stylesheet" href="css/style.min.css">    
     <title>Guará Tsunami - Delicioso sabor Estimulante e Refrescante</title>  
 
   </head>
   <body>
     <div id="top_page"></div>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light nav-tsunami">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light navClient">
             <div class="container">
-                <a class="navbar-brand" href="">
+                <div>&nbsp;&nbsp;</div>
+                <a class="navbar-brand ml-auto mr-auto scroll_nav" href="#top_page">
                     <img src="images/logo-guara.png" alt="logo guara">            
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navClient" aria-controls="navClient" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navClient">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a data-scroll class="scroll_tsu nav-link" href="#top_page">Home</a>
+                            <a data-scroll class="scroll_nav nav-link" href="#top_page">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="scroll_tsu nav-link" href="#mixin-produtos">Produtos</a>
+                            <a data-scroll class="scroll_nav nav-link" href="#mixin-produtos">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="scroll_tsu nav-link" href="#sabor">Sobre</a>
+                            <a data-scroll class="scroll_nav nav-link" href="#sabores">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="scroll_tsu nav-link" href="#fale_conosco">Contato</a>
+                            <a data-scroll class="scroll_nav nav-link" href="#fale_conosco">Contato</a>
                         </li>
                     </ul>
                 </div>      
@@ -45,100 +46,114 @@
         <div id="carousel-tsunami" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="images/banner-home.jpg" alt="Guará Tsunami - Delicioso sabor Estimulante e Refrescante">
+              <!-- <img class="d-block w-100" src="images/banner-home.jpg" alt="Guará Tsunami - Delicioso sabor Estimulante e Refrescante"> -->
+              <img class="img-fluid w-100 d-none d-md-block" src="images/banner-home.jpg" alt="Guará Tsunami - Delicioso sabor Estimulante e Refrescante">
+              <img class="img-fluid w-100 d-block d-md-none" src="images/banner-home-mob.jpg" alt="Guará Tsunami - Delicioso sabor Estimulante e Refrescante">
             </div>
           </div>          
         </div>
     </header>   
 
     <main>
-        <section id="mixin-produtos">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-5 ml-auto">
-                        <figure>
-                            <img src="images/mix-produtos.jpg" alt="mix de produtos" class="img-fluid">
-                        </figure>
-                    </div>
-                    <div class="col-12 col-md-5 mr-auto">
-                        <h3>Extenso mix de produtos</h3>
-                        <p>A linha de energético Tsunami disponibiliza para os consumidores, a tradicional lata de 269ml, a garrafa pet com 1 litro e 2 litros
-                        e também o turbo drink de 20ml.</p>
+       
+       <section id="mixin-produtos">
+           <div class="container">
+               <div class="row">
+                   <div class="col-12 bgMixin">
+                       <div class="imgProd">
+                           <img src="images/mix-produtos.png" alt="mixin de produtos" class="img-fluid">
+                       </div>
+                       <div class="infoProd">
+                           <h3>Mix de Produtos</h3>
 
-                        <p>Para compartilhar ou consumir sozinho.</p>
-                        <h4>É SÓ ESCOLHER SUA DOSE EXTRA <strong>DE ENERGIA!</strong></h4>
-                    </div>
-                </div>
-            </div>
-        </section>
+                           <p>O que era bom ficou ainda melhor, unimos a energia do Guaraná com a força da marca Tsunami em 4 deliciosas opções para acompanhar o dia a dia de quem busca uma bebida saudável e refrescante.</p>
 
-        <section id="produtos">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <figure>
-                            <img src="images/tsunami-lata-web.jpg" alt="tsunami lata 269ml" class="lt img-fluid">
-                        </figure>
-                        <div class="nome-produto">
-                            Tsunami <br>lata 269ml
-                        </div>
-                        <a href="images/pop-up-lata-tsu.jpg" class="saiba-mais btn" data-toggle="lightbox" data-gallery="tsunami-gallery" title="Tsunami Lata">
-                            + Saiba mais +
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <figure>
-                            <img src="images/tsunami-1l-web.jpg" alt="tsunami 1 litro" class="l1 img-fluid">
-                        </figure>
-                        <div class="nome-produto">
-                            Tsunami <br>1 litro
-                        </div>
-                        <a href="images/pop-up-1-litro.jpg" class="saiba-mais btn" data-toggle="lightbox" data-gallery="tsunami-gallery" title="Tsunami 1 Litro">
-                            + Saiba mais +
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <figure>
-                            <img src="images/tsunami-2l-web.jpg" alt="tsunami 2 litros" class="l2 img-fluid">
-                        </figure>
-                        <div class="nome-produto">
-                            Tsunami <br>2 litros
-                        </div>
-                        <a href="images/pop-up-2-litros.jpg" class="saiba-mais btn" data-toggle="lightbox" data-gallery="tsunami-gallery" title="Tsunami 2 Litros">
-                            + Saiba mais +
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <figure>
-                            <img src="images/turbo-drink-web.jpg" alt="tsunami turbo drink" class="img-fluid">
-                        </figure>
-                        <div class="nome-produto">
-                            Tsunami <br>Turbo Drink 20ml
-                        </div>
-                        <a href="images/pop-up-flaconetes.jpg" class="saiba-mais btn" data-toggle="lightbox" data-gallery="tsunami-gallery" title="Tsunami Turdo Drink">
-                            + Saiba mais +
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                           <p>O Guaraná é um energético natural com propriedades que estimulam o sistema nervoso, facilitando a capacidade de concentração e raciocínio, favorecendo o trabalho muscular e evitando a fadiga.</p>
+                       </div>
+                       <div class="bgFolhas"></div>
+                   </div>
+               </div>
+
+               <div class="row produtos">
+                   <div class="col-xs-12 col-md-3">
+                       <figure>
+                           <img src="images/guara-acai.png" alt="" class="img-fluid" alt="Guará Tsunami Açaí 540ml">
+                       </figure>
+                       <h4 class="nameProd"><span>Guará Tsunami</span> Açaí 540ml</h4>
+                       <a href="images/pop-up-acai.png" class="btn btClient" data-toggle="lightbox" data-gallery="client-gallery"  title="saiba mais">+ saiba mais +</a>
+                   </div>
+                   <div class="col-xs-12 col-md-3">
+                       <figure>
+                           <img src="images/guara-tradicional.png" alt="" class="img-fluid" alt="Guará Tsunami Guaraná 540ml">
+                       </figure>
+                       <h4 class="nameProd"><span>Guará Tsunami</span> Guaraná 540ml</h4>
+                       <a href="images/pop-up-guarana.jpg" class="btn btClient" data-toggle="lightbox" data-gallery="client-gallery"  title="saiba mais">+ saiba mais +</a>
+                   </div>
+                   <div class="col-xs-12 col-md-3">
+                       <figure>
+                           <img src="images/guara-limao.png" alt="" class="img-fluid" alt="Guará Tsunami Limão 540ml">
+                       </figure>
+                       <h4 class="nameProd"><span>Guará Tsunami</span> Limão 540ml</h4>
+                       <a href="images/pop-up-limao.jpg" class="btn btClient" data-toggle="lightbox" data-gallery="client-gallery"  title="saiba mais">+ saiba mais +</a>
+                   </div>
+                   <div class="col-xs-12 col-md-3">
+                       <figure>
+                           <img src="images/guara-gengibre.png" alt="" class="img-fluid" alt="Guará Tsunami Gengibre 540ml">
+                       </figure>
+                       <h4 class="nameProd"><span>Guará Tsunami</span> Gengibre 540ml</h4>
+                       <a href="images/pop-up-gengibre.jpg" class="btn btClient" data-toggle="lightbox" data-gallery="client-gallery"  title="saiba mais">+ saiba mais +</a>
+                   </div>
+               </div>
+           </div>
+       </section> 
 
         <section id="sabores">
             <div class="container">
                 <div class="row">
-                    Sabores
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sabor acai">
+                            <div class="space">&nbsp;</div>
+                            <div class="info">
+                                <h4 class="nameFruit">Açaí</h4>
+                                <p>O Guaraná Tsunami Açaí é a união da energia do Guaraná com os benefícios do Açaí. Essa dupla 100% brasileira é a combinação perfeita para encarar de forma natural e com disposição os desafios do dia a dia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sabor limao">
+                            <div class="space">&nbsp;</div>
+                            <div class="info">
+                                <h4 class="nameFruit">Limão</h4>
+                                <p>O Guaraná Tsunami Limão é para quem quer uma bebida refrescante com toque de limão. Refrescante em dose dupla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sabor guarana">
+                            <div class="space">&nbsp;</div>
+                            <div class="info">
+                                <h4 class="nameFruit">Guaraná</h4>
+                                <p>O Guaraná Tsunami é o produto ideal para quem deseja desfrutar das propriedades do Guaraná em sua plenitude.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sabor gengibre">
+                            <div class="space">&nbsp;</div>
+                            <div class="info">
+                                <h4 class="nameFruit">Gengibre</h4>
+                                <p>O Guaraná Tsunami Gengibre é ideal para quem curte uma bebida mais aromática e refrescante e quer encarar as atividades do dia com uma dose extra de disposição.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="map">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col">
-                        mapa 520
-                    </div>
-                </div>
-            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1AzDPT3P5hAUthdXZqTl44IraAlHt0lLD" height="520"></iframe>
         </section>
 
         <section id="fale_conosco">
@@ -198,7 +213,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="infos-tsunami">                                                                               
-                        <small>© copyright Guará Tsunami 2018</small>
+                        <small>© copyright Guará Tsunami 2020</small>
                     </div>
                     <figure class="mt-4">
                         <a href="http://oy.com.br/" title="Desenvolvido por OY Creative Studio" target="_blank">
